@@ -8,11 +8,15 @@ public static void main(String[] args) {
 			String input = JOptionPane.showInputDialog("give me a random number");
 			System.out.println(input);
 			int number = Integer.parseInt(input);
-			
-			if (number%1 == 0 && number%number == 0) {
-				System.out.println("not prime");
+			for (int i=2; i<number; i++) {
+				if(number%i==0) {
+					System.out.println("not prime");
+					System.exit(0);
+				}
 				
 			}
+			System.out.println("prime");
+			
 }
 	public prime_or_not() {
 		
